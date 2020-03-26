@@ -55,7 +55,7 @@ typedef struct
     float current[2];
     float temp[2];
 
-} EPS_bcr_data_t;
+} OS_PACK EPS_bcr_data_t;
 
 /*
 ** EPS power conditioning module (PCM) data
@@ -65,7 +65,7 @@ typedef struct
     float current;
     float voltage;
 
-} EPS_pcm_data_t;
+} OS_PACK EPS_pcm_data_t;
 
 
 typedef struct
@@ -73,14 +73,14 @@ typedef struct
     float current;
     float voltage;
 
-} EPS_bat_pcm_data_t;
+} OS_PACK EPS_bat_pcm_data_t;
 
 typedef struct
 {
     float heater_status;
     float temp;
 
-} EPS_bat_daughterboard_t;
+} OS_PACK EPS_bat_daughterboard_t;
 
 /*
 ** EPS power distribution module (PDM) data
@@ -90,7 +90,7 @@ typedef struct
     float current;
     float voltage;
 
-} EPS_pdm_data_t;
+} OS_PACK EPS_pdm_data_t;
 
 typedef struct
 {
@@ -98,7 +98,7 @@ typedef struct
     uint16 auto_software;
     uint16 manual;
 
-} EPS_bat_resets_t;
+} OS_PACK EPS_bat_resets_t;
 
 /*
 ** EPS battery data
@@ -118,7 +118,7 @@ typedef struct
     EPS_bat_daughterboard_t db[BAT_DAUGHTERBOARD_COUNT];
     uint16 checksum;
 
-} EPS_battery_data_t;
+} OS_PACK EPS_battery_data_t;
 
 /*
  * EPS PDM States
@@ -129,7 +129,7 @@ typedef struct
     uint32 expected;
     uint32 initial;
 
-} EPS_pdm_states_t;
+} OS_PACK EPS_pdm_states_t;
 
 /*
  * EPS Resets
@@ -141,14 +141,14 @@ typedef struct
     uint16 manual;
     uint16 comms_watchdog;
 
-} EPS_resets_t;
+} OS_PACK EPS_resets_t;
 
 typedef struct
 {
     uint32 error;
     uint32 success;
 
-} EPS_counters_t;
+} OS_PACK EPS_counters_t;
 
 typedef struct
 {
@@ -180,7 +180,7 @@ typedef struct
 
     EPS_battery_data_t battery[BAT_COUNT];
 
-} EPS_hk_tlm_t;
+} OS_PACK EPS_hk_tlm_t;
 
 #define EPS_HK_TLM_LNGTH sizeof(EPS_hk_tlm_t)
 
